@@ -1,0 +1,18 @@
+#!/bin/sh
+case "$1" in
+  start)
+    echo "Starting NTP service..."
+    ln -sf /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
+    ntpdate -u pool.ntp.org
+    ntpd -g
+    exit 0
+    ;;
+  stop)
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+
+

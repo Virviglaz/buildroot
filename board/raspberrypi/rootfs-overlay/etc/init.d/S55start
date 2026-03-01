@@ -1,0 +1,22 @@
+#!/bin/sh
+case "$1" in
+  start)
+    echo "Starting eBikeGTK application..."
+    modprobe vc4 || exit 1
+    modprobe drm || exit 1
+    modprobe v3d || exit 1
+    echo "Modules loaded successfully."
+    export XDG_RUNTIME_DIR=/tmp
+    export GDK_BACKEND=wayland
+    export WAYLAND_DISPLAY=wayland-1
+    weston --backend=drm-backend.so --renderer=pixman > /tmp/weston.log 2>&1 &
+    sleep 2
+    echo "Weston compositor started."
+    exit 0
+    ;;
+  stop)
+    ;;
+  *)
+    exit 1
+    ;;
+esac
