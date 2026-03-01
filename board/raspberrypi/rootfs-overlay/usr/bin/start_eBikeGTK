@@ -1,0 +1,15 @@
+#!/bin/sh
+
+export XDG_RUNTIME_DIR=/tmp
+export WAYLAND_DISPLAY=wayland-1
+export GDK_BACKEND=wayland
+
+export GDK_GL=disabled
+export GDK_RENDERING=cairo
+
+export LC_ALL=C
+export TZ=Europe/Amsterdam
+
+sleep 1
+
+/usr/bin/eBikeGTK /usr/share/eBikeGTK/

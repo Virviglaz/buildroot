@@ -52,7 +52,7 @@ WESTON_CONF_OPTS += -Dimage-webp=false
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_LIBEGL)$(BR2_PACKAGE_HAS_LIBGBM)$(BR2_PACKAGE_HAS_LIBGLES),yyy)
-WESTON_CONF_OPTS += -Drenderer-gl=true
+WESTON_CONF_OPTS += -Drenderer-gl=false
 WESTON_DEPENDENCIES += libegl libgbm libgles
 ifeq ($(BR2_PACKAGE_WESTON_SIMPLE_CLIENTS),y)
 WESTON_SIMPLE_CLIENTS += dmabuf-egl dmabuf-feedback egl

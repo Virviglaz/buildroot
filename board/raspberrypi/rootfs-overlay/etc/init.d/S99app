@@ -1,0 +1,17 @@
+#!/bin/sh
+case "$1" in
+  start)
+    echo "Starting eBike application..."
+    sleep 5
+    start_eBikeGTK &
+    exit 0
+    ;;
+  stop)
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+
+

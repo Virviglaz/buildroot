@@ -1,0 +1,7 @@
+config BR2_PACKAGE_EBIKEGTK
+    bool "eBikeGTK"
+    depends on BR2_PACKAGE_GTKMM3
+    help
+        Electric bikes monitoring application.
+
+        https://github.com/Virviglaz/eBikeGTK
