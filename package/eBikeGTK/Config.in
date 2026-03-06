@@ -1,6 +1,6 @@
 config BR2_PACKAGE_EBIKEGTK
     bool "eBikeGTK"
-    depends on BR2_PACKAGE_GTKMM3
+    depends on BR2_PACKAGE_GTKMM4
     help
         Electric bikes monitoring application.
 
