@@ -1,5 +1,1 @@
-# From https://download.gnome.org/sources/gtk/4.21/gtk-4.21.0.sha256sum
-sha256  f52475c5041dfd02cc4eed22ee94f12ec310c16a68fda9203dc54ffd5daa6e6f  gtk-4.21.0.tar.xz
-
-# Hash for license file:
-sha256  b7993225104d90ddd8024fd838faf300bea5e83d91203eab98e29512acebd69c  COPYING
+sha256  1f9ff58d8f2a4d67e9bec7966577bb9f8f60cd62da3c8b7a303d8afaeaeb1618  gtk-4.21.6.tar.xz
