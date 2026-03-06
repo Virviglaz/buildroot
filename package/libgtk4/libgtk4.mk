@@ -5,7 +5,7 @@
 ################################################################################
 
 LIBGTK4_VERSION_MAJOR = 4.21
-LIBGTK4_VERSION = $(LIBGTK4_VERSION_MAJOR).0
+LIBGTK4_VERSION = $(LIBGTK4_VERSION_MAJOR).6
 LIBGTK4_SOURCE = gtk-$(LIBGTK4_VERSION).tar.xz
 LIBGTK4_SITE = https://download.gnome.org/sources/gtk/$(LIBGTK4_VERSION_MAJOR)
 LIBGTK4_LICENSE = LGPL-2.0+
@@ -23,6 +23,7 @@ LIBGTK4_DEPENDENCIES = \
 	libglib2 \
 	librsvg \
 	pango \
+	libdrm \
 	$(TARGET_NLS_DEPENDENCIES)
 
 LIBGTK4_CONF_OPTS = \
