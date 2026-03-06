@@ -1,15 +1,19 @@
 #!/bin/sh
 
-export XDG_RUNTIME_DIR=/tmp
+export XDG_RUNTIME_DIR=/tmp/runtime-root
+mkdir -p $XDG_RUNTIME_DIR
+chmod 700 $XDG_RUNTIME_DIR
+ln -sf /tmp/wayland-1 $XDG_RUNTIME_DIR/wayland-1
+
 export WAYLAND_DISPLAY=wayland-1
 export GDK_BACKEND=wayland
-
+export MESA_LOADER_DRIVER_OVERRIDE=vc4
 export GDK_GL=disabled
-export GDK_RENDERING=cairo
+export LIBGL_ALWAYS_SOFTWARE=1
 
 export LC_ALL=C
 export TZ=Europe/Amsterdam
 
 sleep 1
 
-/usr/bin/eBikeGTK /usr/share/eBikeGTK/
+dbus-run-session /usr/bin/eBikeGTK /usr/share/eBikeGTK/
